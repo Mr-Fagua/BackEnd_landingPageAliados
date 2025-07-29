@@ -1,0 +1,6 @@
+PORT= # Puerto del servidor
+
+# Correo saliente
+EMAIL_FROM= # Correo desde el cual se enviarán los correos
+EMAIL_PASS= # Contraseña de aplicacion del correo 
+EMAIL_TO= # Correo de destino administrador
