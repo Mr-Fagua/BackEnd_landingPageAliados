@@ -29,18 +29,6 @@ const connectToWhatsApp = async () => {
     });
 
     sock.ev.on('creds.update', saveCreds);
-
-    // Respuesta automática a mensajes recibidos
-    sock.ev.on('messages.upsert', async (m) => {
-        const message = m.messages[0];
-        const remoteJid = message?.key?.remoteJid;
-        const fromMe = message?.key?.fromMe;
-
-        if (remoteJid && !fromMe) {
-            console.log('📩 Mensaje recibido de:', remoteJid);
-            await sock.sendMessage(remoteJid, { text: '¡Hola! Este es un mensaje automático.' });
-        }
-    });
 };
 
 const sendMessage = async (numero, mensaje) => {
