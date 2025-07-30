@@ -17,7 +17,7 @@ const handleSendEmails = async (req, res) => {
 
         Muy pronto uno de nuestros asesores se comunicará contigo para brindarte atención personalizada y resolver cualquier duda que tengas.
 
-        En *Aliados Express*, tu envío está en buenas manos 💛`;
+        En *Aliados Express*, tu envío está en buenas manos ⚡`;
 
       await sendMessage(datos.telefono, mensaje);
     }
